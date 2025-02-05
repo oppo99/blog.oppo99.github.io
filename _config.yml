@@ -138,3 +138,9 @@ exclude:
   - README.md
   - CNAME
 
+gems: ['jekyll-multiple-languages']
+
+languages: ['en', 'it']
+
+# If not config, the first item of languages will be used as the default.
+language_default: 'en'
