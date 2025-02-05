@@ -1,14 +1,14 @@
 <ul class="visible-links">
-  <li class="masthead__menu-item">
+  <nav class="masthead__menu-item">
    {% assign nav_language = site.lang %}
      {% assign menu_items = site.data.my-nav-lang.menu_items.[nav_language] %}
      {% unless menu_items %}
        {% assign menu_items = site.data.my-nav-lang.menu_items.[site.language_default] %}
      {% endunless %}
      {% for item in menu_items %}
-       <li>
+
          <a href="{{ item.path }}">{{ item.label }}</a>
-       </li>
+
      {% endfor %} 
-    </li>
+      </nav>
 </ul>
