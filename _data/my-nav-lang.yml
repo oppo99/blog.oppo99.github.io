@@ -1,0 +1,27 @@
+menu_title:
+  it: Prima navigazione
+  en: Primary navigation
+
+menu_items:
+  en:
+    - label: Home
+      path: /en/Home/
+    - label: Getting Started
+      path: /en/Getting Started/
+    - label: Search
+      path: /en/Search/
+    - label: Archive
+      path: /en/blog/
+    - label: "it"
+      path: /it/
+  it:
+    - label: Home
+      path: /it/Home/
+    - label: Getting Started
+      path: /it/Getting Started/
+    - label: Search
+      path: /it/Search/
+    - label: Archive
+      path: /it/blog/
+    - label: "en"
+      path: /en/

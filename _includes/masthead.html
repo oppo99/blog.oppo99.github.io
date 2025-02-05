@@ -1,12 +1,14 @@
-{% for item in site.data.navigation.languages %}
-  {% if item.language == page.lang %}
-    {% for link in item.links %}
-      {% if link.url contains "http" %}
-        {% assign url = link.url %}
-      {% else %}
-        {% assign url = link.url | relative_url %}
-      {% endif %}
-      <a class="page-link" href="{{ url }}">{{ link.title }}</a>
-    {% endfor %}
-  {% endif %}
-{% endfor %}
+ul class="visible-links">
+            <li class="masthead__menu-item">
+             {% assign nav_language = site.lang %}
+               {% assign menu_items = site.data.my-nav-lang.menu_items.[nav_language] %}
+               {% unless menu_items %}
+                 {% assign menu_items = site.data.my-nav-lang.menu_items.[site.language_default] %}
+               {% endunless %}
+               {% for item in menu_items %}
+                 <li>
+                   <a href="{{ item.path }}">{{ item.label }}</a>
+                 </li>
+               {% endfor %} 
+              </li>
+ </ul>

@@ -79,7 +79,43 @@ kramdown:
 sass:
   style: :expanded # You might prefer to minify using :compressed
 
+language_default: it
 
+collections_dir: content
+collections:
+  it:
+    output: true
+    permalink: /:collection/:slug
+  en:
+    output: true
+    permalink: /:collection/:slug
+
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "it"
+    values:
+      layout: "page"
+  - scope:
+      path: "_it/posts"
+    values:
+      layout: "post"
+      permalink: /it/post/:slug
+  - scope:
+      path: ""
+      type: "en"
+    values:
+      layout: "page"
+  - scope:
+      path: "_en/posts"
+    values:
+      layout: "post"
+      permalink: /en/post/:slug
 
 
 # Use the following plug-ins
