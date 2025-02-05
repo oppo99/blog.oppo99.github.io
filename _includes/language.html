@@ -1,14 +1,18 @@
-{% unless page.layout == 'front' %}
-  <ul class="navigation">
-    {% for link in site.navigation %}
-      {% assign current = nil %}
-      {% if page.url == link.url or page.layout == link.layout %}
-        {% assign current = 'current' %}
+{% for item in site.data.navigation.languages %}
+  {% if item.language == page.lang %}
+    {% for link in item.links %}
+      {% if link.url contains "http" %}
+        {% assign url = link.url %}
+      {% else %}
+        {% assign url = link.url | relative_url %}
       {% endif %}
-
-      <nav class="{% if forloop.first %}first{% endif %} {{ current }} {% if forloop.last %}last{% endif %}">
-        <a class="{{ current }}" href="{{ link.url }}">{{ link.text }}</a>
-      </nav>
+      <ul class="visible-links">
+        {%- for link in site.data.navigation.languages -%}
+          <li class="masthead__menu-item">
+            <a href="{{ link.url | relative_url }}"{% if link.description %} title="{{ link.description }}"{% endif %}>{{ link.title }}</a>
+          </li>
+        {%- endfor -%}
+      </ul>
     {% endfor %}
-  </ul>
-{% endunless %}
+  {% endif %}
+{% endfor %}

@@ -1,0 +1,25 @@
+languages:
+- language: "en"
+  links:
+  - title: Home
+    url: /en/Home/
+  - title: Getting Started
+    url: /en/Getting Started/
+  - title: Search
+    url: /en/Search/
+  - title: Archive
+    url: /en/blog/
+  - title: "it"
+    url: /it/
+- language: "it"
+  links:
+  - title: Home
+    url: /it/Home/
+  - title: Getting Started
+    url: /it/Getting Started/
+  - title: Search
+    url: /it/Search/
+  - title: Archive
+    url: /it/blog/
+  - title: "en"
+    url: /en/

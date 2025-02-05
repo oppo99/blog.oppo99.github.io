@@ -79,17 +79,7 @@ kramdown:
 sass:
   style: :expanded # You might prefer to minify using :compressed
 
-navigation:
-- text: Home
-  url: /en/Home/
-- text: Getting Started
-  url: /en/Getting Started/
-- text: Search
-  url: /en/Search/
-  layout: About
-- text: Archive
-  url: /en/blog/
-  layout: post
+
 
 
 # Use the following plug-ins
