@@ -1,5 +1,8 @@
-
-  <select name="languages" id="lang" value="it">
-    <option value="it">Italiano</option>
-    <option value="en">Inglese</option>
-  </select>
+<select onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);" class="lang-selector">
+  <option value="../en" class="lang-option">
+    <a hreflang="EN" rel="alternate">En</a>
+  </option>
+  <option value="../fr/" class="lang-option" selected>
+    <a hreflang="IT" rel="alternate">It</a>
+  </option>
+</select>
