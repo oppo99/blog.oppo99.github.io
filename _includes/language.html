@@ -1,8 +1,14 @@
-<select onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);" class="lang-selector">
-  <option value="../en" class="lang-option">
-    <a hreflang="EN" rel="alternate">En</a>
-  </option>
-  <option value="../it" class="lang-option" selected>
-    <a hreflang="IT" rel="alternate">It</a>
-  </option>
-</select>
+{% unless page.layout == 'front' %}
+  <ul class="navigation">
+    {% for link in site.navigation %}
+      {% assign current = nil %}
+      {% if page.url == link.url or page.layout == link.layout %}
+        {% assign current = 'current' %}
+      {% endif %}
+
+      <li class="{% if forloop.first %}first{% endif %} {{ current }} {% if forloop.last %}last{% endif %}">
+        <a class="{{ current }}" href="{{ link.url }}">{{ link.text }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endunless %}
