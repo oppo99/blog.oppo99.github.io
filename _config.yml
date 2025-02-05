@@ -128,7 +128,7 @@ plugins:
 include: ['_pages','_pages/it','_pages/en','content','content/_en','content/_it','content/_en/_post','content/_it/_posts']
 
 paginate: 6
-paginate_path: /page:num/
+paginate_path: /it/page:num/
 
 # Exclude these files from your production _site
 exclude:
