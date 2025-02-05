@@ -1,6 +1,6 @@
 ---
 layout: page
-permalink: /archive/
+permalink: /it/archive/
 title: Posts Archive
 ---
 
